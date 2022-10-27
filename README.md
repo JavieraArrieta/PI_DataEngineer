@@ -1,13 +1,21 @@
 # Proyecto Individual 1- Data Engineering
 
 
-## 
+## Objetivo
+En este proyecto se realizar un proceso de ETL (extract, transform and load) a partir de un conjunto de datos enfocado en una misma perspectiva de negocio. Los datos vienen de diversas fuentes de relevamiento de precios en distintos mercados. El objetivo es trabajar los diferentes tipos de archivos para llevarlos a una misma extensión y, una vez finalizada esta etapa, crear los joins necesarios para poder crear un DER y dejarlos almacenados en un archivo con extensión .db. Por último, el trabajo deberá contemplar la carga incremental del archivo "precios_semana_20200518.txt".
 
-- 
+
+## Pasos a seguir
+
+- Primero debemos lograr tener las 3 tabla en MySQL
+
+<img src="./ETL.PNG">
 
 
-- Procesar los diferentes datasets. 
-- Crear un archivo DB con el motor de SQL que quieran. Pueden usar SQLAlchemy por ejemplo.
-- Realizar en draw.io un diagrama de flujo de trabajo del ETL y explicarlo en vivo.
-- Realizar una carga incremental de los archivos que se tienen durante el video.
-- Realizar una query en el video, para comprobar el funcionamiento de todo su trabajo. La query a armar es la siguiente: Precio promedio de la sucursal 9-1-688.
+- Luego podremos hacer la carga incremental a la tabla precio
+
+<img src="./incremental.PNG">
+
+- Relaciones en MySQL
+
+<img src="./DER.PNG">
